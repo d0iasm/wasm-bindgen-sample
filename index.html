@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Sample web-bindgen</title>
+  </head>
+  <body>
+    <h1>Sample web-bindgen</h1>
+    <script type="module" type="text/javascript">
+      import init, { foo, bar } from './pkg/wasm_bindgen_sample.js';
+      async function initialize() {
+        await init(); // Load the wasm file.
+        console.log(foo("foo!"));
+        bar("bar!");
+      }
+      initialize();
+    </script>
+  </body>
+</html>
